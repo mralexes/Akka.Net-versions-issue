@@ -14,11 +14,7 @@ namespace Akka_1_4
               ""actor"": {
                 ""provider"": ""cluster"",
               },
-                ""remote.dot-netty.tcp"":{
-                ""batching"": {
-                ""enabled"": false
-                }
-              }
+              ""remote.dot-netty.tcp.batching.enabled"":""false""
             }
           }
         ";
