@@ -15,9 +15,6 @@ namespace Akka_1_4
                 ""provider"": ""cluster"",
               },
               ""remote.dot-netty.tcp.batching.enabled"":""false""
-              cluster{
-                seeds = [""akka.tcp://1_3@seed_1_3_1:2200,akka.tcp://1_3@seed_1_3_2:2201,akka.tcp://1_3@seed_1_3_3:2202""]
-              }
             }
           }
         ";
@@ -27,7 +24,7 @@ namespace Akka_1_4
         {
             var bootstrapFromDocker = DockerBootstrap.BootstrapFromDocker(Config);
 
-            using (var actorSystem = ActorSystem.Create("1_3", Config))
+            using (var actorSystem = ActorSystem.Create(Environment.GetEnvironmentVariable("ACTOR_SYSTEM"), bootstrapFromDocker))
             {
                 await actorSystem.WhenTerminated;
             }
