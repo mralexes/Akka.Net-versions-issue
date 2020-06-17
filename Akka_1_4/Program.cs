@@ -8,15 +8,9 @@ namespace Akka_1_4
     class Program
     {
         private static readonly string Config = @"
-        {
-            ""akka"": {
-              ""loglevel"": ""Info"",
-              ""actor"": {
-                ""provider"": ""cluster"",
-              },
-              ""remote.dot-netty.tcp.batching.enabled"":""false""
-            }
-          }
+        
+         akka.actor.provider = cluster
+         akka.remote.dot-netty.tcp.batching.enabled = false
         ";
 
 
