@@ -10,7 +10,7 @@ namespace Akka_1_3
         private static readonly string Config = @"
         {
             ""akka"": {
-              ""loglevel"": ""Warning"",    
+              ""loglevel"": ""Info"",    
               ""actor"": {
                 ""provider"": ""cluster""
               }

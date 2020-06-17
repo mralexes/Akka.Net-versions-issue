@@ -5,28 +5,28 @@ services:
     ports:
       - "1100:1100"
     environment:
-      ACTOR_SYSTEM: 1_4
+      ACTOR_SYSTEM: 14
       CLUSTER_IP: seed_1_4_1
       CLUSTER_PORT: 1100
-      CLUSTER_SEEDS: "akka.tcp://1_4@seed_1_4_1:1100,akka.tcp://1_4@seed_1_4_2:1101,akka.tcp://1_4@seed_1_4_3:1102"
+      CLUSTER_SEEDS: "akka.tcp://14@seed_1_4_1:1100,akka.tcp://14@seed_1_4_2:1101,akka.tcp://14@seed_1_4_3:1102"
   seed_1_4_2:
     build: ./Akka_1_4
     ports:
       - "1101:1101"
     environment:
-      ACTOR_SYSTEM: 1_4
+      ACTOR_SYSTEM: 14
       CLUSTER_IP: seed_1_4_2
       CLUSTER_PORT: 1101
-      CLUSTER_SEEDS: "akka.tcp://1_4@seed_1_4_1:1100,akka.tcp://1_4@seed_1_4_2:1101,akka.tcp://1_4@seed_1_4_3:1102"
+      CLUSTER_SEEDS: "akka.tcp://14@seed_1_4_1:1100,akka.tcp://14@seed_1_4_2:1101,akka.tcp://14@seed_1_4_3:1102"
   seed_1_4_3:
     build: ./Akka_1_4
     ports:
       - "1102:1102"
     environment:
-      ACTOR_SYSTEM: 1_4
+      ACTOR_SYSTEM: 14
       CLUSTER_IP: seed_1_4_3
       CLUSTER_PORT: 1102
-      CLUSTER_SEEDS: "akka.tcp://1_4@seed_1_4_1:1100,akka.tcp://1_4@seed_1_4_2:1101,akka.tcp://1_4@seed_1_4_3:1102"
+      CLUSTER_SEEDS: "akka.tcp://14@seed_1_4_1:1100,akka.tcp://14@seed_1_4_2:1101,akka.tcp://14@seed_1_4_3:1102"
   
   
   
@@ -35,26 +35,26 @@ services:
     ports:
       - "2200:2200"
     environment:
-      ACTOR_SYSTEM: 1_3
+      ACTOR_SYSTEM: 13
       CLUSTER_IP: seed_1_3_1
       CLUSTER_PORT: 2200
-      CLUSTER_SEEDS: "akka.tcp://1_3@seed_1_3_1:2200,akka.tcp://1_3@seed_1_3_2:2201,akka.tcp://1_3@seed_1_3_3:2202"
+      CLUSTER_SEEDS: "akka.tcp://13@seed_1_3_1:2200,akka.tcp://13@seed_1_3_2:2201,akka.tcp://13@seed_1_3_3:2202"
   seed_1_3_2:
     build: ./Akka_1_3
     ports:
       - "2201:2201"
     environment:
-      ACTOR_SYSTEM: 1_3
+      ACTOR_SYSTEM: 13
       CLUSTER_IP: seed_1_3_2
       CLUSTER_PORT: 2201
-      CLUSTER_SEEDS: "akka.tcp://1_3@seed_1_3_1:2200,akka.tcp://1_3@seed_1_3_2:2201,akka.tcp://1_3@seed_1_3_3:2202"
+      CLUSTER_SEEDS: "akka.tcp://13@seed_1_3_1:2200,akka.tcp://13@seed_1_3_2:2201,akka.tcp://13@seed_1_3_3:2202"
   seed_1_3_3:
     build: ./Akka_1_3
     ports:
       - "2202:2202"
     environment:
-      ACTOR_SYSTEM: 1_3
+      ACTOR_SYSTEM: 13
       CLUSTER_IP: seed_1_3_3
       CLUSTER_PORT: 2202
-      CLUSTER_SEEDS: "akka.tcp://1_3@seed_1_3_1:2200,akka.tcp://1_3@seed_1_3_2:2201,akka.tcp://1_3@seed_1_3_3:2202"
+      CLUSTER_SEEDS: "akka.tcp://13@seed_1_3_1:2200,akka.tcp://13@seed_1_3_2:2201,akka.tcp://13@seed_1_3_3:2202"
   
